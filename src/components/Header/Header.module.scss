@@ -1,16 +1,8 @@
-.header {
+.headerDefault {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
-
-  &.menuOpen {
-    justify-content: flex-end;
-
-    .logo {
-      display: none;
-    }
-  }
 }
 
 .logo {
@@ -19,76 +11,14 @@
   font-weight: normal;
   text-decoration: none;
   transition: transform 0.3s ease-in-out;
+  text-align: center;
 
   &:hover {
     transform: scale(1.1);
   }
-}
-
-.burger {
-  cursor: pointer;
-  display: none;
 }
 
 .button {
   background: none;
   border: none;
 }
-
-.navItem{
-  transition: transform 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
-.navList {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  list-style: none;
-  cursor: pointer;
-}
-
-.navLink {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-@media (max-width: 425px) {
-  .burger {
-    display: block;
-  }
-
-  .navList {
-    display: block;
-    position: absolute;
-    right: 160px;
-  }
-}
-
-@media (max-width: 376px) {
-  .burger {
-    display: block;
-  }
-
-  .navList {
-    display: block;
-    position: absolute;
-    right: 135px;
-  }
-}
-
-@media (max-width: 325px) {
-  .burger {
-    display: block;
-  }
-
-  .navList {
-    display: block;
-    position: absolute;
-    right: 110px;
-  }
-}
-
