@@ -34,3 +34,9 @@ body {
         animation: gradientAnimation 16s ease infinite;
     }
 }
+
+.app-container{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 15px;
+}
