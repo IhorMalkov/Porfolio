@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 .header{
@@ -45,4 +44,36 @@
 .navItem{
   color: white;
   font-size: large;
+}
+
+@media(min-width: 768px){
+  .button{
+    display: none;
+  }
+  .hidden{
+    display: block;
+  }
+
+  .navList{
+    display: flex;
+    gap: 30px;
+    cursor: pointer;
+  }
+
+  .navItem{
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .navLink{
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+  }
 }
