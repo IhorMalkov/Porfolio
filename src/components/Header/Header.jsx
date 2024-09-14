@@ -11,7 +11,7 @@ export default function Header() {
 
     return (
         <header className={isOpen ? styles.header : styles.headerDefault}>
-            <a href='/' className={styles.logo}>IhorMalkov</a>
+            <a href='/' className={`${styles.logo} ${isOpen ? styles.hidden : ''}`}>IhorMalkov</a>
 
             <button onClick={toggleMenu} className={styles.button}>
                 <img
@@ -21,8 +21,7 @@ export default function Header() {
                 />
             </button>
 
-            {isOpen &&
-                <nav className={styles.nav}>
+            <nav className={`${styles.nav} ${isOpen ? '' : styles.hidden}`}>
                 <ul className={styles.navList}>
                     {navLinks.map((item) => (
                         <li key={item.id} className={styles.navItem}>
@@ -33,7 +32,7 @@ export default function Header() {
                     ))}
                 </ul>
             </nav>
-            }
         </header>
     );
 }
+

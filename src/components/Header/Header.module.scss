@@ -5,6 +5,16 @@
   position: relative;
 }
 
+.header{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.hidden{
+  display: none;
+}
+
 .logo {
   color: white;
   font-size: 20px;
@@ -21,4 +31,18 @@
 .button {
   background: none;
   border: none;
+}
+
+.nav{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.navList{
+  list-style: none;
+}
+
+.navItem{
+  color: white;
+  font-size: large;
 }
