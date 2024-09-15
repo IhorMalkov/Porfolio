@@ -1,0 +1,37 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  border: 2px solid blue;
+  width: 100%;
+}
+
+.heroText{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.textContainer{
+  width: 100%;
+}
+
+
+.wave {
+  display: inline-block;
+  animation: wave-animation 2s ease forwards;
+  transform-origin: 70% 70%;
+}
+
+@keyframes  wave-animation{
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  40% { transform: rotate(14deg); }
+  50% { transform: rotate(-4deg); }
+  60% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
