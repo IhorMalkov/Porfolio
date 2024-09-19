@@ -8,7 +8,7 @@ function Model() {
     return <primitive object={gltf.scene} />;
 }
 
-function Room() {
+function Me() {
     return (
         <div style={{ width: '100vw', height: '100vh' }}>
             <Canvas camera={{ position: [0, 5, 10], fov:22}}>
@@ -23,4 +23,4 @@ function Room() {
     );
 }
 
-export default Room;
+export default Me;

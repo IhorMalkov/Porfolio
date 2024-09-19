@@ -1,5 +1,5 @@
 import styles from './Hero.module.scss'
-import Room from '../Room/Room.jsx'
+import Me from '../Me/Me.jsx'
 
 export default function Hero(){
     return (
@@ -8,7 +8,7 @@ export default function Hero(){
                 <p className={styles.heroText}>Hi, I am Ihor Malkov<span className={styles.wave}>👋🏻</span></p>
                 <p className={styles.heroText}>I'm a passionate Software Engineer with a focus on creating web applications</p>
             </div>
-            <Room/>
+            <Me/>
         </section>
     )
 }
