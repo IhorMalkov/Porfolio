@@ -10,14 +10,14 @@ function Model() {
 
 function Me() {
     return (
-        <div style={{ width: '100vw', height: '100vh' }}>
-            <Canvas camera={{ position: [0, 5, 10], fov:22}}>
-                <ambientLight intensity={2} />
-                <directionalLight position={[10, 10, 5]} intensity={1} />
+        <div style={{width: '100%', height: '100vh'}}>
+            <Canvas camera={{position: [0, 1, 5], fov: 50}}>
+                <ambientLight intensity={2}/>
+                <directionalLight position={[10, 10, 5]} intensity={1}/>
                 <Suspense fallback={null}>
-                    <Model />
+                    <Model/>
                 </Suspense>
-                <OrbitControls enableZoom={false} minDistance={1} maxDistance={10} />
+                <OrbitControls enableZoom={false} minDistance={1} maxDistance={10}/>
             </Canvas>
         </div>
     );
