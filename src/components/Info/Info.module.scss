@@ -1,10 +1,23 @@
 .title{
   text-align: center;
+  color: white;
 }
 .subtitle{
+  color: white;
   text-align: center;
+
+}
+
+.link{
+  color: white;
+  text-decoration: none;
 }
 
 .text{
   color: white;
+}
+
+.cardHolder{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
