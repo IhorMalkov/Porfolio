@@ -1,4 +1,4 @@
-import project1 from '../../assets/project1.png'
+import project1 from '../../../public/assets/project1.png'
 export const cards = [
     {
         id: 1,

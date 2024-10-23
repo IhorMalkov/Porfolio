@@ -1,5 +1,5 @@
 import styles from './Hero.module.scss'
-import Me from '../Models/Me.jsx'
+import Models from '../Models/Models.jsx'
 
 export default function Hero(){
     return (
@@ -9,7 +9,7 @@ export default function Hero(){
                 <p className={styles.heroText}>I'm a passionate Software Engineer with a focus on creating web applications</p>
             </div>
             <div className={styles.model}>
-                <Me/>
+                <Models />
             </div>
         </section>
     )

@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
-import menuIcon from '../../assets/menu.svg';
-import closeMenuIcon from '../../assets/close.svg';
+import menuIcon from '../../../public/assets/menu.svg';
+import closeMenuIcon from '../../../public/assets/close.svg';
 import { navLinks } from './HeaderConstants.js';
 import { useState } from "react";
 
