@@ -1,12 +1,18 @@
+/* global.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Abel', sans-serif; /* Apply the font globally */
+}
 
 body {
     background: linear-gradient(135deg, #0d0d0d, #1c1c1c, #2b2b2b, #1a1a1a);
     background-size: 300% 300%;
     animation: gradientAnimation 8s ease infinite;
-    height: 100vh;
-    margin: 0;
-    font-family: "Abel", sans-serif;
 }
 
 @keyframes gradientAnimation {
@@ -35,8 +41,7 @@ body {
     }
 }
 
-.app-container{
-    display: flex;
-    flex-direction: column;
-    margin: 5px 15px;
+.app-container {
+    margin: 0 20px;
+    min-height: 100vh;
 }
