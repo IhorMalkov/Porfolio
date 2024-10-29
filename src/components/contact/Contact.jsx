@@ -3,7 +3,7 @@ import styles from './Contact.module.scss';
 export default function Contact() {
     return (
         <section className={styles['contact-section']}>
-            <img className={styles['terminal-image']} src='/assets/terminal.png' alt='Terminal Background'/>
+            <img className={styles['terminal-image']} src='/assets/images/terminal.png' alt='Terminal Background'/>
             <div className={styles['form-container']}>
                 <h3>Let's Connect</h3>
                 <h4>
