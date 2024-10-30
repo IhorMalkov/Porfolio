@@ -1,31 +1,24 @@
-import { useEffect, useRef, useMemo } from 'react';
+/*import React, { useEffect, useRef } from 'react';
 import { useGraph } from '@react-three/fiber';
 import { useAnimations, useFBX, useGLTF } from '@react-three/drei';
 import { SkeletonUtils } from 'three-stdlib';
 
-const Me = (props) => {
+const Me = ({ animationName = 'dance', ...props }) => {
   const group = useRef();
 
-  // Load the GLTF model
-  const { scene } = useGLTF('/assets/models/avatar.glb');
-  const clone = useMemo(() => SkeletonUtils.clone(scene), [scene]);
+  const { scene } = useGLTF('/assets/models/developer.glb');
+  const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene]);
   const { nodes, materials } = useGraph(clone);
 
-  // Load the FBX animation
-  const { animations } = useFBX('/assets/animations/dance.fbx');
-  
-  // Create actions from the animations
-  const { actions } = useAnimations(animations, group);
+  const { animations: danceAnimation } = useFBX('/assets/animations/dance.fbx');
+  danceAnimation[0].name = 'dance';
+
+  const { actions } = useAnimations([danceAnimation[0]], group);
 
   useEffect(() => {
-    const action = actions['dance'];
-    if (action) {
-      action.reset().fadeIn(0.5).play(); 
-      return () => action.fadeOut(0.5);
-    } else {
-      console.warn('Dance action not found');
-    }
-  }, [actions]);
+    actions[animationName].reset().fadeIn(0.5).play();
+    return () => actions[animationName].fadeOut(0.5);
+  }, [animationName]);
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -96,6 +89,7 @@ const Me = (props) => {
   );
 };
 
-useGLTF.preload('/assets/models/avatar.glb');
+useGLTF.preload('/assets/models/developer.glb');
 
 export default Me;
+*/

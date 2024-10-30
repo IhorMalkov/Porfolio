@@ -25,7 +25,7 @@ export default function Contact() {
                         placeholder="Share your thoughts, or inquiries..." />
                     <button type="submit">
                         Send Message
-                        <img src="/assets/arrow-up.png" alt="Send" />
+                        <img src="/assets/images/arrow-up.png" alt="Send" />
                     </button>
                 </form>
             </div>
