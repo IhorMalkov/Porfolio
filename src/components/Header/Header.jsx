@@ -1,27 +1,41 @@
 import styles from './Header.module.scss';
 import menuIcon from '/assets/images/menu.svg';
-import closeMenuIcon from '/assets/images/close.svg';
+import closeMenuIcon from '/assets/images/close.svg'; 
 import { navLinks } from './HeaderConstants.js';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+    }, [isOpen]);
+
     return (
-        <header className={isOpen ? styles.header : styles.headerDefault} id="header">
+        <header className={`${styles.header} ${isOpen ? styles.headerOpen : ''}`} id="header">
             <a href='/' className={`${styles.logo} ${isOpen ? styles.hidden : ''}`}>IhorMalkov</a>
 
-            <button onClick={toggleMenu} className={styles.button}>
+            <button onClick={toggleMenu} className={`${styles.button} ${isOpen ? styles.hidden : ''}`}>
                 <img
                     className={styles.burger}
-                    src={isOpen ? closeMenuIcon : menuIcon}
-                    alt={isOpen ? 'Close menu' : 'Open menu'}
+                    src={menuIcon}
+                    alt="Open menu"
                 />
             </button>
 
-            <nav className={`${styles.nav} ${isOpen ? '' : styles.hidden}`}>
+            {isOpen && (
+                <button onClick={toggleMenu} className={styles.closeButton}>
+                    <img src={closeMenuIcon} alt="Close menu" />
+                </button>
+            )}
+
+            <nav className={`${styles.nav} ${isOpen ? styles.navOpen : ''}`}>
                 <ul className={styles.navList}>
                     {navLinks.map((item) => (
                         <li key={item.id} className={styles.navItem}>
@@ -35,4 +49,3 @@ export default function Header() {
         </header>
     );
 }
-

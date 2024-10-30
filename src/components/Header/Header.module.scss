@@ -1,17 +1,21 @@
-.headerDefault {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
 }
 
-.header{
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-}
-
-.hidden{
-  display: none;
+.headerOpen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95); 
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1000; 
 }
 
 .logo {
@@ -20,7 +24,6 @@
   font-weight: normal;
   text-decoration: none;
   transition: transform 0.3s ease-in-out;
-  text-align: center;
 
   &:hover {
     transform: scale(1.1);
@@ -30,50 +33,75 @@
 .button {
   background: none;
   border: none;
+  cursor: pointer;
+  z-index: 10;
 }
 
-.nav{
-  margin-right: auto;
-  margin-left: auto;
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
 }
 
-.navList{
+.nav {
+  display: none;
+}
+
+.navOpen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.navList {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.navItem{
+.navItem {
   color: white;
   font-size: large;
 }
 
-@media(min-width: 768px){
-  .button{
+@media (min-width: 768px) {
+  .button {
     display: none;
   }
-  .hidden{
-    display: block;
-  }
 
-  .navList{
+  .nav {
     display: flex;
     gap: 30px;
-    cursor: pointer;
+    margin-left: auto;
   }
 
-  .navItem{
+  .navList {
+    display: flex;
+    gap: 30px;
+  }
+
+  .navItem {
     transition: transform 0.3s ease-in-out;
-    text-align: center;
 
     &:hover {
       transform: scale(1.1);
     }
   }
 
-  .navLink{
+  .navLink {
     color: white;
     font-size: 20px;
     font-weight: normal;
     text-decoration: none;
     transition: transform 0.3s ease-in-out;
   }
+}
+
+.hidden {
+  display: none;
 }

@@ -8,8 +8,8 @@ const Info = () => {
     const handleMouseMove = (e, cardId) => {
         const card = e.currentTarget;
         const rect = card.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width - 0.5; // X position relative to the card center
-        const y = (e.clientY - rect.top) / rect.height - 0.5; // Y position relative to the card center
+        const x = (e.clientX - rect.left) / rect.width - 0.5; 
+        const y = (e.clientY - rect.top) / rect.height - 0.5; 
 
         setHoverStyle((prev) => ({
             ...prev,
@@ -21,7 +21,6 @@ const Info = () => {
     };
 
     const handleMouseLeave = (cardId) => {
-        // Reset rotation when mouse leaves
         setHoverStyle((prev) => ({
             ...prev,
             [cardId]: {
@@ -32,7 +31,7 @@ const Info = () => {
 
     };
     return (
-        <section>
+        <section id='work'>
             <div className={styles.title}>
                 <h2 className={styles.main}>
                     My Work

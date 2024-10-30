@@ -5,7 +5,7 @@ import { OrbitControls } from '@react-three/drei';
 
 export default function Hero() {
     return (
-        <section className={styles.container}>
+        <section className={styles.container} id='about'>
             <div className={styles.textContainer}>
                 <p className={styles.heroText}>
                     Hi, I am Ihor Malkov <span className={styles.wave}>👋🏻</span>
