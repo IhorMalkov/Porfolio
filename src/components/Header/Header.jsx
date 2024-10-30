@@ -10,7 +10,7 @@ export default function Header() {
     const toggleMenu = () => setIsOpen(!isOpen);
 
     return (
-        <header className={isOpen ? styles.header : styles.headerDefault}>
+        <header className={isOpen ? styles.header : styles.headerDefault} id="header">
             <a href='/' className={`${styles.logo} ${isOpen ? styles.hidden : ''}`}>IhorMalkov</a>
 
             <button onClick={toggleMenu} className={styles.button}>
