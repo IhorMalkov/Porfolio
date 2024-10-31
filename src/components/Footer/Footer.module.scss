@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.75rem 0.5rem; 
-    border-top: 1px solid rgba(0, 0, 0, 0.3); 
+    border-top: 1px solid rgb(255, 255, 255); 
     flex-wrap: wrap;
     gap: 1.25rem; 
     margin-top: 350px;
@@ -11,6 +11,7 @@
   
   .footerLinks {
     display: flex;
+    align-items: center;
     gap: 0.5rem; 
   }
   

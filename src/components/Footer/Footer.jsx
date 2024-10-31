@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className={styles.footerDefault}>
       <div className={styles.footerLinks}>
         <a href="#header" className={styles.navItem}>Go Back</a>
-        <p>|</p>
+        <p style={{color: 'white'}}>|</p>
         <a href="#contact" className={styles.navItem}>Contact Me</a>
       </div>
 
